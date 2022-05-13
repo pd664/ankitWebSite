@@ -8,6 +8,7 @@ const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length - 1;
   const [value, updateValue] = useState(1);
+  const [barValue, setBarValue] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,16 +46,25 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div>
-      <ProgressBar value={value} />
-      <div className="slider">
-        <FaAngleDoubleLeft className="left-arrow" onClick={prevSlide} />
-        <FaAngleDoubleRight className="right-arrow" onClick={next} />
+    <div className="cont">
+      <ProgressBar value={value} className="bar" />
+      <div className="slidera">
+        
         {ImgData.map((image, index) => {
           return (
             <div className={"slide"} key={index}>
+              
               {index === current && (
-                <img src={image.image} alt={image.alt} className="img" />
+                <div className="content">
+                  
+                <img src={image.image} alt={image.alt} className="img img-fluid mt-0" />
+                <FaAngleDoubleLeft className="left-arrow" onClick={prevSlide} />
+                <FaAngleDoubleRight className="right-arrow" onClick={next} />
+                <p className="p1">{value > 5 ? image.a1 : ""}</p>
+                <h2 className="heading">{value > 8 ?image.text : ""}</h2>
+                <p className="p2">{value > 11 ?image.a2 : ""}</p>
+                {value > 14 ? <button className="button">{image.btn}</button> : ""}
+                </div>
               )}
             </div>
           );
