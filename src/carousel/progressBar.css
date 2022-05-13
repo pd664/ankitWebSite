@@ -1,5 +1,11 @@
 .bar {
     width: 100%;
-    height: 10px !important;
-    z-index: -1;
+    height: 7px !important;
 }
+
+progress::-webkit-progress-bar { 
+    background-color: rgb(89,116,163) !important;
+    color: rgb(89,116,163) !important; 
+}
+
+/* rgb(128,128,128) */

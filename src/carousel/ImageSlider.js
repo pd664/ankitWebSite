@@ -47,7 +47,7 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <div className="cont">
-      <ProgressBar value={value} className="bar" />
+      
       <div className="slidera">
         
         {ImgData.map((image, index) => {
@@ -56,14 +56,13 @@ const ImageSlider = ({ slides }) => {
               
               {index === current && (
                 <div className="content">
-                  
+                  <ProgressBar value={value} className="bar" />
                 <img src={image.image} alt={image.alt} className="img img-fluid mt-0" />
                 <FaAngleDoubleLeft className="left-arrow" onClick={prevSlide} />
                 <FaAngleDoubleRight className="right-arrow" onClick={next} />
-                <p className="p1">{value > 5 ? image.a1 : ""}</p>
-                <h2 className="heading">{value > 8 ?image.text : ""}</h2>
-                <p className="p2">{value > 11 ?image.a2 : ""}</p>
-                {value > 14 ? <button className="button">{image.btn}</button> : ""}
+                
+                {value > 5 ? <a href="#"><h2 className="heading">{image.text}</h2></a> : ""}
+               
                 </div>
               )}
             </div>

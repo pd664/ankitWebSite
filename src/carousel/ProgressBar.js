@@ -3,10 +3,8 @@ import './progressBar.css';
 import PropTypes from 'prop-types'
 // import {ProgressBar} from 'react-bootstrap'
 const Progressbar = ({ value, max }) => {
-    
-
   return (
-    <progress value={value} max={max}  className="bar" />
+    <progress value={value} max={max} className="bar" />
   )
 }
 

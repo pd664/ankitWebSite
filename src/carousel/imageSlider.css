@@ -7,8 +7,6 @@
 }
 
 .image {
-    /* width: 100%;
-    height: 100%; */
     border-radius: 5px;
 }
 
@@ -37,32 +35,19 @@
     cursor: pointer;
 }
 
-.p1 {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .heading {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: rgb(89,116,163);
 }
 
-.p2 {
-    position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.heading:hover {
+    color:brown;    
 }
 
-.button {
+.bar {
     position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  background-color: rgb(8,115,250);
+    
 }
